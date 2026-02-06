@@ -25,15 +25,25 @@ The application is designed with a clean folder structure, separating features, 
 
 This project follows a standard directory structure:
 
-* `src/`: Contains the main source code for the application.
-    * `components/`: Reusable UI components.
-    * `pages/`: Application pages or routes.
-    * `utils/`: Helper functions and utilities.
-* `public/`: Static assets like images and fonts.
-* `tests/`: Automated tests (unit, integration).
-* `docs/`: Project documentation and guides.
-* `README.md`: This file.
-* `LICENSE`: Project license information.
+## Project Structure
+
+This project follows a modular directory structure to keep features, utilities, and data handling separate and maintainable:
+
+* `main.py`: Entry point of the application.
+* `feats/`: Contains feature-specific modules.
+  * `add_expense.py`: Handles adding new expense records.
+  * `delete_expense.py`: Handles deletion of existing expenses.
+  * `save_expense.py`: Manages saving expense data to file.
+  * `show_expenses.py`: Displays all stored expenses.
+  * `update_expense.py`: Handles updating expense records.
+* `utility/`: Contains helper functions and file operation logic.
+  * `delete_from_file.py`: Deletes records from the CSV file.
+  * `modify_expense.py`: Updates expense data in memory.
+  * `modify_from_file.py`: Updates records directly in the file.
+* `data/`: Auto-generated directory for persistent data storage.
+  * `expenses.csv`: Stores expense records (created at runtime).
+* `README.md`: Project documentation.
+
 
 
 ---
